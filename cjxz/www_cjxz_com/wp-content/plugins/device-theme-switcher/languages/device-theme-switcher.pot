@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: device-theme-switcher 3.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-22 12:27-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-shortcodes.php:59 includes/class-widgets.php:22
+#: includes/class-widgets.php:85
+msgid "View Full Website"
+msgstr ""
+
+#: includes/class-shortcodes.php:86 includes/class-widgets.php:124
+#: includes/class-widgets.php:184
+msgid "Return to Mobile Website"
+msgstr ""
+
+#: includes/class-widgets.php:23
+msgid "Add a link for mobile users"
+msgstr ""
+
+#: includes/class-widgets.php:91 includes/class-widgets.php:190
+msgid "Link Text:"
+msgstr ""
+
+#: includes/class-widgets.php:92
+msgid "Ex: View Full Website"
+msgstr ""
+
+#: includes/class-widgets.php:125
+msgid "Add a link for mobile users to return to the mobile website"
+msgstr ""
+
+#: includes/class-widgets.php:191
+msgid "Ex: Return to Mobile Website"
+msgstr ""
+
+#: includes/class-wp-admin.php:65
+msgid "Device Theme Switcher"
+msgstr ""
+
+#: includes/class-wp-admin.php:66
+msgid "Device Themes"
+msgstr ""
+
+#: includes/class-wp-admin.php:123
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wp-admin.php:218
+msgid "Handheld Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:234
+msgid "Handheld devices like Apple iPhone, Android, BlackBerry, and more."
+msgstr ""
+
+#: includes/class-wp-admin.php:237
+msgid "Tablet Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:253
+msgid "Tablet devices like Apple iPad, Galaxy Tab, Kindle Fire, and more."
+msgstr ""
+
+#: includes/class-wp-admin.php:256
+msgid "Show Optional Settings"
+msgstr ""
+
+#: includes/class-wp-admin.php:264
+msgid "Low-Support Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:267
+msgid "Use Handheld Setting"
+msgstr ""
+
+#: includes/class-wp-admin.php:281
+msgid "Devices which lack complete CSS & JavaScipt Support."
+msgstr ""
+
+#: includes/class-wp-admin.php:285
+msgid "Cookie Lifespan"
+msgstr ""
+
+#: includes/class-wp-admin.php:312
+msgid ""
+"Length of time until a user is redirected back to their initial device theme "
+"after they've requested the 'Desktop' Version."
+msgstr ""
+
+#: includes/class-wp-admin.php:323
+msgid "Save Settings"
+msgstr ""
+
+#: includes/class-wp-admin.php:332
+msgid "Help & Support"
+msgstr ""
+
+#: includes/class-wp-admin.php:340
+msgid "Helpful Links"
+msgstr ""
+
+#: includes/class-wp-admin.php:346
+msgid "Support Forum"
+msgstr ""
+
+#: includes/class-wp-admin.php:352
+msgid "FAQ"
+msgstr ""
+
+#: includes/class-wp-admin.php:357
+msgid "Shortcodes"
+msgstr ""
+
+#: includes/class-wp-admin.php:359 includes/class-wp-admin.php:379
+msgid "Display a link to 'View Full Website'"
+msgstr ""
+
+#: includes/class-wp-admin.php:367 includes/class-wp-admin.php:388
+msgid "Display a link to 'Return to Mobile Website'"
+msgstr ""
+
+#: includes/class-wp-admin.php:377
+msgid "Template Tags"
+msgstr ""
+
+#: includes/class-wp-admin.php:399
+msgid "URL Paramaters"
+msgstr ""
+
+#: includes/class-wp-admin.php:402
+msgid "Helpful for developers to view a specific device theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:406
+msgid "View Handheld Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:413
+msgid "View Tablet Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:420
+msgid "View Low-Support Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:427
+msgid "View Active Theme"
+msgstr ""
+
+#: includes/class-wp-admin.php:489
+msgid "Settings saved."
+msgstr ""
+
+#: includes/updates/dts-2.0.php:92
+msgid ""
+"Thanks for upgrading! We've compeltely rewritten Device Theme Switcher and "
+"added lots of new goodies! Read about the changes <a href=\"http://wordpress."
+"org/plugins/device-theme-switcher/faq/\" target=\"_blank\">here</a>."
+msgstr ""

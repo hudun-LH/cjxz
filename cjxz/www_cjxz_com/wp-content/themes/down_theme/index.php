@@ -1,0 +1,9 @@
+<?php get_header(); ?>
+      <?php get_template_part('partials/home','boutique'); ?>
+      <?php get_template_part('partials/home','block_two'); ?>
+      <?php get_template_part('partials/home','block_three'); ?>
+      <?php get_template_part('partials/home','block_four'); ?>
+      <?php get_template_part('partials/home','block_five'); ?>
+      <?php get_template_part('partials/home','block_six'); ?>
+      <?php get_template_part('partials/part','links'); ?>
+<?php get_footer(); ?>
