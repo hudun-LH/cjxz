@@ -13,7 +13,7 @@
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 .clear { clear:both; }
@@ -25,7 +25,7 @@ html {
 .ashuwp_field {
   width:100%;
   position:relative;
-  margin-top:40px;
+  margin-top:10px;
   min-height:20px;
   float:left;
 }
@@ -81,7 +81,7 @@ html {
   width:100%;
 }
 .ashu_file_preview img {
-  width:750px;
+  max-width:750px;
   max-height:310px;
 }
 .ashuwp_field input[type=radio].ashuwp_field_radio,
@@ -565,4 +565,10 @@ button.close {
       background: #008ec2;
     border-color: #006799;
     color: #fff;
+}
+/**搜索框**/
+#post-search-input{
+  width:330px;
+  height:30px;
+
 }

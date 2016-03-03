@@ -60,15 +60,22 @@
                 
                 if($soft_down_count=='')
                   $soft_down_count = 0;
+
+                  $soft_update_time = date('Y-m-d');
                 ?>
                 <li><span class="key">软件大小：</span><span class="value"><?php echo $size; ?><?php echo $dw; ?></span></li>
                 <li><span class="key">软件语言：</span><span class="value"><?php echo $jmyy_value; ?></span></li>
                 <li><span class="key">授权方式：</span><span class="value"><?php echo $sqfs_value; ?></span></li>
                 <li><span class="key">软件类别：</span><span class="value"><?php the_terms($post->ID,'softs','',',',''); ?></span></li>
-                <li><span class="key">更新时间：</span><span class="value"><?php the_time('Y-m-d'); ?></span></li>
+                <li><span class="key">更新时间：</span><span class="value"><?php echo $soft_update_time; ?></span></li>
                 <li><span class="key">下载次数：</span><span class="value red"><?php echo $soft_down_count.'次'; ?></span></li>
-                <?php if($soft_site!=''){ ?>
-                <li class="row"><span class="key">软件官网：</span><span class="value blue"><a target="_blank" rel="nofollow" href="<?php echo $soft_site; ?>"><?php echo $soft_site; ?></a></span></li>
+                <?php if($soft_site!=''){ 
+				if(strpos($soft_site,'com/')){
+				$softsite=substr($soft_site,0,strpos($soft_site,'com/')+4)."...";
+				}else{
+				$softsite="http://www.cjxz.com/...";
+				}?>
+                <li class="row"><span class="key">软件官网：</span><span class="value blue"><a target="_blank" rel="nofollow" href="<?php echo $soft_site; ?>"><?php echo $softsite; ?></a></span></li>
                 <?php } ?>
               </ul>
               <div class="rate clearfix">
@@ -192,45 +199,35 @@
               </a>
             </div>
           </div>
-          <div class="relate_post">
+    <div class="relate_post">
             <div class="line_title clearfix">
               <h5>相关资讯</h5>
             </div>
             <div class="relate_li clearfix">
-              <?php
-              global $post;
-              $cats = wp_get_post_tags($post->ID,'post_tags');
-              if ($cats) {
-                $args = array(
-                  'category__in' => array( $cats[0]->term_id ),
-                  'showposts' => 10
-                );
-                query_posts($args);
-                if(have_posts()):
-              ?>
               <ul>
-                <?php while (have_posts()): the_post(); update_post_caches($posts); ?>
-                <li>&gt;&gt;<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-                <?php endwhile; ?>
-              </ul>
-              <?php
-                else:
-                $args = array(
-                  'showposts' => 10
-                );
-                query_posts($args);
-                if(have_posts()):
-                ?>
-                <ul>
-                <?php while (have_posts()): the_post(); update_post_caches($posts); ?>
-                <li>&gt;&gt;<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-                <?php endwhile; ?>
-              </ul>
                 <?php
-                endif; 
-                endif; wp_reset_query(); 
-              }
-              ?>
+                global $post;
+                $cats = wp_get_post_categories($post->ID);
+                if ($cats) {
+                  $args = array(
+                    'category__in' => array( $cats[0] ),
+                    'post__not_in' => array( $post->ID ),
+                    'showposts' => 10
+                  );
+                  query_posts($args);
+                  if (have_posts()) {
+                    while (have_posts()) { the_post(); update_post_caches($posts); ?>
+                      <li>&gt;&gt;<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+                  <?php }
+                  }else {
+                    echo '<li>&gt;&gt; 暂无相关文章</li>';
+                  }
+                  wp_reset_query();
+                }else {
+                  echo '<li>&gt;&gt;暂无相关文章</li>';
+                }
+                ?>
+              </ul>
             </div>
           </div>
           <div id="comment_area"><div class="line_title clearfix"><h5>网友评论</h5></div><?php comments_template(); ?></div>
